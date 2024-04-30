@@ -1,5 +1,7 @@
 from PyQt5 import QtWidgets
 import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+import matplotlib.font_manager as font_manager
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
@@ -16,11 +18,15 @@ class ChartDisplay(QtWidgets.QWidget):
             if widget is not None:
                 widget.setParent(None)
 
-        fig = Figure()
+        # Define a custom color palette
+        colors = ['#2196F3', '#FF9800', '#E91E63', '#4CAF50']
+
+        fig = Figure(figsize=(10, 6))
         ax = fig.add_subplot(111)
-        ax.bar(months, sums, color=['blue', 'green'])
-        ax.set_xlabel('Month')
-        ax.set_ylabel('Total Sum')
-        ax.set_title('Comparison of Total Sums')
+        ax.bar(months, sums, color=colors, width=0.6)
+        ax.set_xlabel('Month', fontsize=14, fontweight='bold', labelpad=10)
+        ax.set_ylabel('Total Sum', fontsize=14, fontweight='bold', labelpad=10)
+        ax.set_title('Comparison of Total Sums', fontsize=16, fontweight='bold', pad=20)
+        ax.grid(True, linestyle='-', linewidth=0.5)
         canvas = FigureCanvas(fig)
         self.chart_layout.addWidget(canvas)
