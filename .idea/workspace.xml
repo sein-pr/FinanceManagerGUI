@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca10d8a3-bfbc-479c-bae6-f8827526e0c8" name="Changes" comment="Broke it down">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart_display.py" beforeDir="false" afterPath="$PROJECT_DIR$/chart_display.py" afterDir="false" />
-    </list>
+    <list default="true" id="ca10d8a3-bfbc-479c-bae6-f8827526e0c8" name="Changes" comment="Changed the UI a little bit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713532951756</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed the UI a little bit">
+      <option name="closed" value="true" />
+      <created>1714476811283</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714476811283</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Broke it down" />
-    <option name="LAST_COMMIT_MESSAGE" value="Broke it down" />
+    <MESSAGE value="Changed the UI a little bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the UI a little bit" />
   </component>
 </project>
