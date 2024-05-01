@@ -6,13 +6,14 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
 class ChartDisplay(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent=None):
+        super().__init__(parent)
 
         self.chart_layout = QtWidgets.QVBoxLayout()
         self.setLayout(self.chart_layout)
 
     def display_comparison_chart(self, months, sums):
+        # Clear any existing widgets in the layout
         for i in reversed(range(self.chart_layout.count())):
             widget = self.chart_layout.itemAt(i).widget()
             if widget is not None:
@@ -28,5 +29,6 @@ class ChartDisplay(QtWidgets.QWidget):
         ax.set_ylabel('Total Sum', fontsize=14, fontweight='bold', labelpad=10)
         ax.set_title('Comparison of Total Sums', fontsize=16, fontweight='bold', pad=20)
         ax.grid(True, linestyle='-', linewidth=0.5)
+
         canvas = FigureCanvas(fig)
         self.chart_layout.addWidget(canvas)
